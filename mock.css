@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+}
+.imgs figure img {
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px rgba(70, 70, 70, 0);
+    box-shadow: 1px 1px 7px 0px #a7a7a7, -1px -1px 7px 0px #a7a7a7;
+}
+h3.wmcsamw {
+    font-weight: 600;
+    font-size: 18px;
+}
+main.test {
+    margin-left: 10rem;
+}
+div.content {
+    position: relative;
+}
+img.quote {
+    width: 50px;
+    height: 50px;
+}
+.domain figure img {
+    width: 128px;
+    height: 32px;
+}
+button img {
+    height: 24px;
+    width: 24px;
+}
+.domain .slick-slide {
+    filter: grayscale(1);
+    width: 130px !important;
+}
+.domain .slick-current {
+    filter: grayscale(0);
+}
