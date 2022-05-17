@@ -34,11 +34,10 @@ button img {
     height: 24px;
     width: 24px;
 }
-.domain .slick-slide {
+.domain .splide__slide img {
     filter: grayscale(1);
-    width: 130px !important;
 }
-.domain .slick-current {
+.domain .is-active img {
     filter: grayscale(0);
 }
 .imgs img {
@@ -54,4 +53,13 @@ section.con-img-wrap {
 }
 .imgs .splide__slide {
     padding: 15px;
+}
+#dom-slider .splide__arrow--prev {
+    left: 77em;
+}
+.splide__track--nav>.splide__list>.splide__slide.is-active {
+    border: none;
+}
+.splide__track--nav > .splide__list > .splide__slide {
+	border: none;
 }

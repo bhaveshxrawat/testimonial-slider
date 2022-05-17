@@ -146,34 +146,18 @@
         <div id="dom-slider" class="splide">
           <div class="splide__track">
             <div class="domain splide__list">
-              <figure class="splide__slide">
-                <img
-                  class="as"
-                  src="https://aftersell.com/i/header_logo.svg"
-                  alt=""
-                />
-              </figure>
-              <figure class="splide__slide">
-                <img
-                  class="fox"
-                  src="https://www.nickelfox.com/images/logo/nickelfox-black-logo-3-x.svg"
-                  alt=""
-                />
-              </figure>
-              <figure class="splide__slide">
-                <img
-                  class="r3"
-                  src="https://images.squarespace-cdn.com/content/v1/5fa5802133274b4834fc85b7/1604941003544-R86AK47O4C06YQUXPX1L/Rokk3r-1.png"
-                  alt=""
-                />
-              </figure>
-              <figure class="splide__slide">
-                <img
-                  class="z"
-                  src="https://uploads-ssl.webflow.com/5e5a5bd23fb2ccacf26e2a80/603fe6533d45a5e669bebf7c_image%204.svg"
-                  alt=""
-                />
-              </figure>
+              <div class="splide__slide">
+                <img class="as" src="https://svgshare.com/i/hRK.svg" alt="" />
+              </div>
+              <div class="splide__slide">
+                <img class="fox" src="https://svgshare.com/i/hRU.svg" alt="" />
+              </div>
+              <div class="splide__slide">
+                <img class="r3" src="https://svgshare.com/i/hRV.svg" alt="" />
+              </div>
+              <div class="splide__slide">
+                <img class="z" src="https://svgshare.com/i/hSL.svg" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -181,45 +165,32 @@
     </main>
     <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <script>
-      new Splide("#content-slider", {
+      var dom = new Splide("#dom-slider", {
         type: "slide",
-        perPage: 1,
-        perMove: 1,
-        arrows: false,
+        autoheight: true,
+        autoWidth: true,
+        isNavigation: true,
         pagination: false,
+        gap: 25,
       }).mount();
 
-      var main = new Splide('#images-slider', {
+      var main = new Splide("#images-slider", {
         type: "fade",
         perPage: 1,
         perMove: 1,
         pagination: false,
         arrows: false,
-      }).mount();
-
-      var thumbnails = new Splide( '#dom-slider', {
-        rewind: true,
-        fixedWidth: 104,
-        fixedHeight: 58,
-        isNavigation: true,
-        gap: 10,
-        pagination: false,
-        cover: true,
-        dragMinThreshold: {
-          mouse: 4,
-          touch: 10,
-        },
-        breakpoints: {
-          640: {
-            fixedWidth: 66,
-            fixedHeight: 38,
-          },
-        },
       });
+      main.sync(dom).mount();
 
-      main.sync(secondarySlider);
-      main.mount();
-      thumbnails.mount();
+      var cont = new Splide("#content-slider", {
+        type: "slide",
+        perPage: 1,
+        perMove: 1,
+        arrows: false,
+        pagination: false,
+      });
+      cont.sync(dom).mount();
     </script>
     <script src="mock.js"></script>
   </body>
