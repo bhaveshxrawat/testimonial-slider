@@ -62,4 +62,6 @@ section.con-img-wrap {
 }
 .splide__track--nav > .splide__list > .splide__slide {
 	border: none;
+    display: flex;
+    align-items: center;
 }
