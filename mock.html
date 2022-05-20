@@ -162,7 +162,24 @@
           </div>
         </div>
       </section>
-      <!-- section.counter>div#count -->
+      <section class="counter">
+        <div class="counter-wrapper">
+        <div id="counter-slider" class="splide">
+          <div class="splide__track">
+            <div class="splide__list">
+              <strong class="splide__slide">1</strong>
+              <strong class="splide__slide">2</strong>
+              <strong class="splide__slide">3</strong>
+              <strong class="splide__slide">4</strong>
+            </div>
+          </div>
+        </div>
+        <div class="slash-four-wrapper">
+          <span>/</span>
+          <span>4</span>
+        </div>
+      </div>
+      </section>
     </main>
     <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <script>
@@ -184,6 +201,17 @@
         arrows: false,
       });
       main.sync(dom).mount();
+
+      var count = new Splide("#counter-slider", {
+        type: "fade",
+        pagination: false,
+        arrows: true,
+        perPage: 1,
+        perMove: 1,
+        gap: 5,
+        drag: false,
+      });
+      count.sync(dom).mount();
 
       var cont = new Splide("#content-slider", {
         type: "slide",
